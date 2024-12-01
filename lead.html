@@ -98,7 +98,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const audio = document.getElementById('bg-audio');
-
+        audio.volume = 0.4;
         // Attempt to autoplay the audio
         audio.play().catch(() => {
             // Fallback: Display an image button to let the user start or pause the audio
