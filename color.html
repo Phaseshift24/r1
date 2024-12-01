@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptic Trial Round 1</title>
+    <style>
+        /* Reset default styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full-page background styling */
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: url('hbg.jpg') no-repeat center center/cover; /* Replace 'hbg.jpg' with your image path */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        p {
+            font-size: 1.6em;
+            margin-bottom: 30px;
+            font-family: "Bebas Neue";
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 15px;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .error-message {
+            color: #b63205;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #cf3801;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 50%;
+            max-width: 200px;
+        }
+
+        button:hover {
+            background-color: #a22c01;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+            3). 𝕬 𝖙𝖆𝖑𝖊 𝖔𝖋 𝖘𝖕𝖎𝖊𝖘, 𝖒𝖎𝖘𝖘𝖎𝖔𝖓𝖘, 𝖆𝖓𝖉 𝖘𝖈𝖍𝖊𝖒𝖊𝖘, 𝖜𝖍𝖊𝖗𝖊 𝖓𝖔𝖙𝖍𝖎𝖓𝖌 𝖎𝖘 𝖊𝖛𝖊𝖗 𝖖𝖚𝖎𝖙𝖊 𝖆𝖘 𝖎𝖙 𝖘𝖊𝖊𝖒𝖘, 𝖜𝖎𝖙𝖍 𝖌𝖆𝖉𝖌𝖊𝖙𝖘 𝖆𝖓𝖉 𝖆𝖈𝖙𝖎𝖔𝖓 𝖙𝖍𝖆𝖙 𝖓𝖊𝖛𝖊𝖗 𝖌𝖊𝖙𝖘 𝖔𝖑𝖉. 𝕬 𝖇𝖑𝖔𝖈𝖐𝖇𝖚𝖘𝖙𝖊𝖗 𝖘𝖊𝖗𝖎𝖊𝖘 𝖜𝖔𝖗𝖙𝖍 𝖒𝖔𝖗𝖊 𝖙𝖍𝖆𝖓 𝖌𝖔𝖑𝖉. 𝖄𝖔𝖚𝖗 𝖒𝖎𝖘𝖘𝖎𝖔𝖓, 𝖘𝖍𝖔𝖚𝖑𝖉 𝖞𝖔𝖚 𝖈𝖍𝖔𝖔𝖘𝖊 𝖙𝖔 𝖆𝖈𝖈𝖊𝖕𝖙 𝖎𝖙: 𝕴𝖓 𝖙𝖍𝖎𝖘 𝖒𝖔𝖛𝖎𝖊, 𝖒𝖞 𝖓𝖆𝖒𝖊'𝖘 𝖖𝖚𝖎𝖙𝖊 𝖇𝖑𝖚𝖓𝖙, 𝖒𝖞 𝖑𝖆𝖘𝖙 𝖓𝖆𝖒𝖊? 𝕴𝖙'𝖘 𝖘𝖔𝖒𝖊𝖙𝖍𝖎𝖓𝖌 𝖞𝖔𝖚 𝖜𝖆𝖓𝖙.
+        </p>
+        <div class="form-container">
+            <form id="passwordForm">
+                <div class="error-message" id="errorMessage"></div>
+                <label>
+                    <input type="password" id="password" placeholder="Your First Name" required>
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for password validation
+        document.getElementById('passwordForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+            validatePassword();
+        });
+
+        function validatePassword() {
+            const passwordInput = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Replace 'mypassword' with your desired password
+            const correctPassword = 'ethan';
+
+            if (passwordInput === correctPassword) {
+                // Redirect to the desired link
+                window.location.href = 'lead.html'; // Replace with your link
+            } else {
+                // Show error message
+                errorMessage.textContent = 'Incorrect password. Please try again.';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Cryptic Trial Round 1</title>
+    <style>
+        /* Resetting default styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full-page background styling */
+        body, html {
+            height: 100%;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        /* Background Image */
+        .background {
+            background: url('huntbg-01.webp') no-repeat center center/cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Centered content styling */
+        .content {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.671); /* semi-transparent background for readability */
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.0em;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        /* Footer styling */
+        footer {
+            color: #fff;
+            width: 100%;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #03DAC6;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Background Image -->
+<div class="background"></div>
+
+<!-- Centered content -->
+<div class="content">
+    <h1></h1>
+    <h2>1.&nbsp; __ &nbsp;&nbsp;+ &nbsp;2.&nbsp; __&nbsp;__&nbsp;__&nbsp;__&nbsp;__&nbsp;__&nbsp;__&nbsp;&nbsp; + &nbsp;3.&nbsp; __&nbsp;__&nbsp;__&nbsp;__&nbsp; </h2>
+</div>
+
+<!-- Audio Element -->
+<audio id="bg-audio" src="mission_impossible.mp3" preload="auto" loop></audio>
+
+<!-- Footer -->
+<footer>
+    <p>© phaseshift2024. Pass-cryptictrail</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const audio = document.getElementById('bg-audio');
+
+        // Attempt to autoplay the audio
+        audio.play().catch(() => {
+            // Fallback: Display an image button to let the user start or pause the audio
+            const playButton = document.createElement('img');
+            playButton.src = 'tibg-removebg-preview.png'; // Replace with the path to your image
+            playButton.alt = 'Play/Pause Background Music';
+            playButton.style = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                width: 80px; /* Increased size */
+                height: 80px; /* Increased size */
+                cursor: pointer;
+                border-radius: 5px;
+                display: block; /* Initially make the image visible */
+            `;
+            document.body.appendChild(playButton);
+            
+            // Function to toggle play and pause
+            const toggleAudio = () => {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            };
+
+            // Set the event listener for the play button
+            playButton.addEventListener('click', () => {
+                toggleAudio();
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

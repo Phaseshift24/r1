@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptic Trial Round 1</title>
+    <style>
+        /* Remove default margins and make image fill the screen */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* Text overlay styling */
+        .overlay-text {
+            position: absolute;
+            top: 20%; /* Adjust vertical position */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .overlay-text1 {
+            position: absolute;
+            top: 50%; /* Adjust vertical position */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .overlay-text2 {
+            position: absolute;
+            top: 35.7%; /* Adjust vertical position */
+            left: 82.6%; /* Center horizontally */
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0); /* Semi-transparent background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .prevent-select {
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+            color:rgba(221, 0, 0, 0)
+        }
+
+        .overlay-text h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .overlay-text p {
+            font-size: 2.0em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Image with usemap to fill the page -->
+    <img src="digibg.jpg" alt="Workplace" usemap="#workmap">
+
+    <!-- Overlay text -->
+    <div class="overlay-text2">
+        <a class="prevent-select" href="color.html"><p class="prevent-select">o</p></a>
+    </div>
+    <div class="overlay-text1">
+        <h3>2). I'm made of numbers, yet i am not math, I guide your devices along their path from clock to screens, I am in the mix, What word describes my techie tricks?
+        </h3>
+        <br/>
+        <p>Click it to turn it on</p>
+    </div>
+</body>
+</html>
