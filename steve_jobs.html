@@ -62,11 +62,55 @@
             border-radius: 10px;
         }
 
+        .overlay-text3 {
+            position: absolute;
+            top: 16.8%; /* Adjust vertical position */
+            left: 15.8%; /* Center horizontally */
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0); /* Semi-transparent background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .overlay-text4 {
+            position: absolute;
+            top: 69.4%; /* Adjust vertical position */
+            left: 32.1%; /* Center horizontally */
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0); /* Semi-transparent background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .overlay-text5 {
+            position: absolute;
+            top: 96%; /* Adjust vertical position */
+            left: 33.4%; /* Center horizontally */
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0); /* Semi-transparent background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .overlay-text6 {
+            position: absolute;
+            top: 14%; /* Adjust vertical position */
+            left: 43%; /* Center horizontally */
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0); /* Semi-transparent background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
         .prevent-select {
             -webkit-user-select: none; /* Safari */
             -ms-user-select: none; /* IE 10 and IE 11 */
             user-select: none; /* Standard syntax */
-            color:rgba(221, 0, 0, 0)
+            color:rgba(0, 0, 0, 0)
         }
 
         .overlay-text h1 {
@@ -86,7 +130,19 @@
 
     <!-- Overlay text -->
     <div class="overlay-text2">
+        <a class="prevent-select" href="pulls.html"><p class="prevent-select">o</p></a>
+    </div>
+    <div class="overlay-text3">
+        <a class="prevent-select" href="soft.html"><p class="prevent-select">o</p></a>
+    </div>
+    <div class="overlay-text4">
+        <a class="prevent-select" href="hair.html"><p class="prevent-select">o</p></a>
+    </div>
+    <div class="overlay-text5">
         <a class="prevent-select" href="color.html"><p class="prevent-select">o</p></a>
+    </div>
+    <div class="overlay-text6">
+        <a class="prevent-select" href="apple.html"><p class="prevent-select">o</p></a>
     </div>
     <div class="overlay-text1">
         <h3>2). I'm made of numbers, yet i am not math, I guide your devices along their path from clock to screens, I am in the mix, What word describes my techie tricks?
@@ -94,5 +150,19 @@
         <br/>
         <p>Click it to turn it on</p>
     </div>
+
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+
+        // Disable F12 key and Ctrl+Shift+I
+        document.addEventListener('keydown', function(event) {
+            if (event.keyCode == 123 || (event.ctrlKey && event.shiftKey && event.keyCode == 73)) {
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>

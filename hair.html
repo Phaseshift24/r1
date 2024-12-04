@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <style>
+    /* Reset styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Background style */
+    body {
+      background: linear-gradient(120deg, #1a2a6c, #b21f1f, #fdbb2d);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* Animated stars */
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.imgur.com/HIAu51C.png') repeat;
+      animation: moveStars 50s linear infinite;
+    }
+
+    @keyframes moveStars {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: 10000px 10000px;
+      }
+    }
+
+    /* Main content styling */
+    .content {
+      z-index: 1;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 4em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .btn-home {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      color: white;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-home:hover {
+      background: white;
+      color: #1a2a6c;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="content">
+    <h1>404</h1>
+    <p>Oops! You've drifted into space and landed on the wrong page.</p>
+    <p>Don’t worry, you can head back to safety by clicking the button below.</p>
+    <a class="btn-home" href="#">Take Me Home</a>
+  </div>
+</body>
+</html>

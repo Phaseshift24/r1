@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cryptic Trial Round 1</title>
+    <title>Cryptic Trail Round 1</title>
     <style>
         /* Remove default margins and make image fill the screen */
         * {
@@ -28,18 +28,7 @@
             display: block;
         }
 
-        /* Text overlay styling */
-        .overlay-text {
-            position: absolute;
-            top: 20%; /* Adjust vertical position */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%);
-            text-align: center;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
-            padding: 20px;
-            border-radius: 10px;
-        }
-
+        /* Overlay styling */
         .overlay-text1 {
             position: absolute;
             bottom: 100px; /* Adjust vertical position */
@@ -50,13 +39,14 @@
             padding: 20px;
             border-radius: 10px;
         }
+
         .overlay-text2 {
             position: absolute;
             top: 46%; /* Adjust vertical position */
             left: 50%; /* Center horizontally */
             transform: translate(-50%, -50%);
             text-align: center;
-            background: rgba(0, 0, 0, 0); /* Semi-transparent background for better readability */
+            background: rgba(0, 0, 0, 0); /* Transparent background */
             padding: 20px;
             border-radius: 10px;
         }
@@ -65,30 +55,58 @@
             -webkit-user-select: none; /* Safari */
             -ms-user-select: none; /* IE 10 and IE 11 */
             user-select: none; /* Standard syntax */
-            color:rgba(0, 0, 0, 0)
+            color: rgba(0, 0, 0, 0);
         }
 
-
-
-        .overlay-text h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        .welcome-gif {
+            position: absolute;
+            top: 20%; /* Adjust vertical position */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%);
+            text-align: center;
         }
 
-        .overlay-text p {
-            font-size: 1.2em;
-            margin-top: 5px;
+        .welcome-gif img {
+            width: auto;
+            height: 250px; /* Adjust the height of the GIF */
         }
     </style>
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+
+        // Disable common developer tool shortcuts
+        document.addEventListener('keydown', function(event) {
+            // Disable F12
+            if (event.key === "F12") {
+                event.preventDefault();
+            }
+            // Disable Ctrl+Shift+I
+            if (event.ctrlKey && event.shiftKey && event.key === "I") {
+                event.preventDefault();
+            }
+            // Disable Ctrl+Shift+J
+            if (event.ctrlKey && event.shiftKey && event.key === "J") {
+                event.preventDefault();
+            }
+            // Disable Ctrl+U
+            if (event.ctrlKey && event.key === "u") {
+                event.preventDefault();
+            }
+        });
+    </script>
 </head>
 <body>
     <!-- Image with usemap to fill the page -->
     <img src="bgr1.jpg" alt="Workplace" usemap="#workmap">
 
-    <!-- Overlay text -->
-    <div class="overlay-text">
-        <h1>Welcome to Cryptic Trail</h1>
+    <!-- Welcome GIF -->
+    <div class="welcome-gif">
+        <img src="welcome.gif" alt="Welcome to Cryptic Trail">
     </div>
+
     <div class="overlay-text2">
         <a class="prevent-select" href="social.html"><p class="prevent-select">.</p></a>
     </div>

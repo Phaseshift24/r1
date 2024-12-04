@@ -56,13 +56,31 @@
         }
 
         /* Footer styling */
-        footer {
+       footer {
             color: #fff;
             width: 100%;
             padding: 10px 0;
             position: fixed;
-            bottom: 20px;
+            bottom: 0;
             text-align: center;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .footer-icons img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .footer-icons img:hover {
+            transform: scale(1.2);
         }
 
         footer a {
@@ -74,6 +92,8 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        
     </style>
 </head>
 <body>
@@ -84,7 +104,7 @@
 <!-- Centered content -->
 <div class="content">
     <h1></h1>
-    <h2>1.&nbsp; __ &nbsp;&nbsp;+ &nbsp;2.&nbsp; __&nbsp;__&nbsp;__&nbsp;__&nbsp;__&nbsp;__&nbsp;__&nbsp;&nbsp; + &nbsp;3.&nbsp; __&nbsp;__&nbsp;__&nbsp;__&nbsp; </h2>
+    <h2>@1.&nbsp; __ &nbsp;&nbsp;+ &nbsp;2.&nbsp; __&nbsp;__&nbsp;__&nbsp;__&nbsp;__&nbsp;__&nbsp;__&nbsp;&nbsp; + &nbsp;3.&nbsp; __&nbsp;__&nbsp;__&nbsp;__&nbsp; </h2>
 </div>
 
 <!-- Audio Element -->
@@ -93,6 +113,21 @@
 <!-- Footer -->
 <footer>
     <p>© phaseshift2024. Pass-cryptictrail</p>
+    <div class="footer-icons">
+        <p>Follow us on:</p>
+        <a href="https://facebook.com" target="_blank">
+            <img src="facebook.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <img src="twitterlogo.png" alt="Twitter">
+        </a>
+        <a href="insta.html" target="">
+            <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="https://Youtube.com" target="_blank">
+            <img src="youtube.png" alt="YouTube">
+        </a>
+    </div>
 </footer>
 
 <script>
